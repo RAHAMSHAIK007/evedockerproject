@@ -1,24 +1,21 @@
-version: '3'
+---
+version: "3"
 services:
   movie:
     image: rahamshaik/phonepaymovies:v1
     ports:
-      - "8000:80"
+      - 8000:80
     deploy:
       replicas: 4
-
   train:
     image: rahamshaik/phonepaytrains:v1
     ports:
-      - "8001:80"
-     deploy:
+      - 8001:80
+    deploy:
       replicas: 4
-
   recharge:
     image: rahamshaik/phonepayrecharges:v1
     ports:
-      - "8002:80"
-     deploy:
+      - 8002:80
+    deploy:
       replicas: 4
-
-
