@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                git 'https://github.com/RAHAMSHAIK007/evedockerproject.git'
+            }
+        }
+        stage('stack') {
+            steps {
+                sh 'docker stack deploy --compose-file docker-compose.yml phonepay'
+            }
+        }
+    }
+}
