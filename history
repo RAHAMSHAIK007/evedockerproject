@@ -1,0 +1,50 @@
+ 1  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    2  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    3  amazon-linux-extras install java-openjdk11 -y
+    4  yum install git maven jenkins -y
+    5  systemctl start jenkins.service
+    6  systemctl status jenkins.service
+    7  yum install docker -y
+    8  systemctl start docker
+    9  systemctl status docker
+   10  hostname -i
+   11  docker swarm init --advertise-addr 172.31.38.60
+   12  docker node ls
+   13  vim Dockerfile
+   14  vim index.html
+   15  docker images
+   16  cat index.html
+   17  docker build -t phonepaymovies:v1 .
+   18  vim index.html
+   19  docker build -t phonepaytrains:v1 .
+   20  vim index.html
+   21  docker build -t phonepayrecharges:v1 .
+   22  docker images
+   23  docker tag rahamshaik/phonepayrecharges:v1
+   24  docker tag phonepayrecharges:v1 rahamshaik/phonepayrecharges:v1
+   25  docker tag phonepaytrains:v1 rahamshaik/phonepaytrains:v1
+   26  docker tag phonepaymovies:v1 rahamshaik/phonepaymovies:v1
+   27  docker login
+   28  docker images
+   29  docker push rahamshaik/phonepayrecharges:v1
+   30  docker push rahamshaik/phonepaytrains:v1
+   31  docker push rahamshaik/phonepaymovies:v1
+   32  vim docker-compose.yml
+   33  cat docker-compose.yml
+   34  git init
+   35  git add *
+   36  vim docker-compose.yml
+   37  git add *
+   38  git commit -m "docker commits" *
+   39  git remote add origin https://github.com/RAHAMSHAIK007/evedockerproject.git
+   40  git push origin master
+   41  cat -n docker-compose.yml
+   42  cat docker-compose.yml
+   43  chmod 777 /var/run/docker.sock
+   44  systemctl daemon-reload
+   45  systemctl resatrt docker
+   46  systemctl restart docker
+   47  systemctl status docker
+   48  docker stack ls
+   49  docker stack ps phonepay
+   50  history
