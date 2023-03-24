@@ -5,16 +5,22 @@ services:
     image: rahamshaik/phonepaymovies:v1
     ports:
       - 8000:80
+    volumes:
+      - volume1
     deploy:
       replicas: 4
   train:
     image: rahamshaik/phonepaytrains:v1
+    volumes:
+      - volume2
     ports:
       - 8001:80
     deploy:
       replicas: 4
   recharge:
     image: rahamshaik/phonepayrecharges:v1
+    volumes:
+      - volume3
     ports:
       - 8002:80
     deploy:
