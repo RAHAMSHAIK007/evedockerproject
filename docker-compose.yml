@@ -4,7 +4,7 @@ services:
   movie:
     image: rahamshaik/phonepaymovies:v1
     ports:
-      - 8000:80
+      - 8007:80
     volumes:
       - volume1
     deploy:
@@ -14,7 +14,7 @@ services:
     volumes:
       - volume2
     ports:
-      - 8001:80
+      - 8008:80
     deploy:
       replicas: 4
   recharge:
@@ -22,6 +22,6 @@ services:
     volumes:
       - volume3
     ports:
-      - 8002:80
+      - 8009:80
     deploy:
       replicas: 4
